@@ -30,6 +30,18 @@ app.get('/', (req, res) => {
 app.get('/info', (req, res) => {
   res.json({ surname: 'Овсянников', group: '9ИС-421' });
 });
+   app.delete('/records/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+      const record = await Record.destroy({ where: { id } });
+      if (!record) {
+        return res.status(404).json({ message: 'Запись не найдена' });
+      }
+      res.status(204).send();
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
 
 app.listen(PORT, () => {
   console.log(`Сервер запущен на http://localhost:${PORT}`);
