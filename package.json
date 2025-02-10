@@ -1,17 +1,26 @@
 {
-  "name": "practice",
+  "name": "lesson_2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanyazxc/lesson_2.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vanyazxc/lesson_2/issues"
+  },
+  "homepage": "https://github.com/vanyazxc/lesson_2#readme",
   "dependencies": {
     "express": "^4.21.2",
-    "sequelize": "^6.37.5",
-    "sqlite3": "^5.1.7"
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5"
   }
 }
